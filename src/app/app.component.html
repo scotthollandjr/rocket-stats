@@ -1,0 +1,19 @@
+<div class="player-row" *ngFor="let player of players | async | ranker" layout="column">
+  <h3>{{player.name}}</h3>
+  <div class="player-info">
+    <p>
+      Goals: {{player.goals}}
+    </p>
+    <p>
+      Wins: {{player.wins}}
+    </p>
+    <p>
+      Total Games: {{player.games}}
+    </p>
+  </div>
+  <div class="buttons">
+    <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
+    <button (click)="addWin(player.wins, player.$key)">+ Win</button>
+    <button (click)="addGame(player.games, player.$key)">+ Game</button>
+  </div>
+</div>
