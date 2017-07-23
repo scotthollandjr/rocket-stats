@@ -1,8 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side, .right-side {
+  flex: 1;
+}
 
 .player-row {
   padding: 10px;
   margin: 10px 15px;
-  max-width: 50%;
   display: flex;
   flex-direction: column;
   background-color: #fbfeff;
@@ -15,4 +22,17 @@
 
 .player-info p {
   margin-right: 10px;
+}
+
+/*.player-square:not(:first-child) {
+  display: none;
+}*/
+
+.right-side {
+  flex-direction: column;
+}
+
+.top-row, .bottom-row {
+  display: flex;
+  flex-direction: row;
 }

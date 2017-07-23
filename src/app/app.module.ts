@@ -7,7 +7,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 
-import { Ranker } from './ranker.pipe';
+import { Ranker } from './pipes/ranker.pipe';
 
 @NgModule({
   declarations: [
