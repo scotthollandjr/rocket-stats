@@ -36,3 +36,10 @@
   display: flex;
   flex-direction: row;
 }
+
+.player-square {
+  padding: 10px;
+  margin: 10px 15px;
+  flex: 1;
+  background-color: #fbfeff;
+}

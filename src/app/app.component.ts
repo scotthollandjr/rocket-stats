@@ -12,18 +12,8 @@ export class AppComponent {
     this.players = db.list('/players');
   }
 
-  addGoal(goals, key) {
-    let newGoals = goals + 1;
-    this.players.update(key, { goals: newGoals });
-  }
-
-  addWin(wins, key) {
-    let newWins = wins + 1;
-    this.players.update(key, { wins: newWins });
-  }
-
-  addGame(games, key) {
-    let newGames = games + 1;
-    this.players.update(key, { games: newGames });
+  add(type, player) {
+    let suckit = player[type] + 1;
+    this.players.update(player.$key, { [type]: suckit });
   }
 }

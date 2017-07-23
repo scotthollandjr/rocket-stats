@@ -10,94 +10,58 @@
           Wins: {{player.wins}}
         </p>
         <p>
+          Saves: {{player.saves}}
+        </p>
+        <p>
           Total Games: {{player.games}}
         </p>
       </div>
       <div class="buttons">
-        <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
-        <button (click)="addWin(player.wins, player.$key)">+ Win</button>
-        <button (click)="addGame(player.games, player.$key)">+ Game</button>
+        <button (click)="add('goals', player)">+ Goal</button>
+        <button (click)="add('wins', player)">+ Win</button>
+        <button (click)="add('saves', player)">+ Save</button>
+        <button (click)="add('games', player)">+ Game</button>
       </div>
     </div>
   </div>
   <div class="right-side">
     <div class="top-row">
       <div class="player-square" *ngFor="let player of players | async | ranker:'goals' | slice:0:1" layout="column">
+        <h2>goals</h2>
         <h3>{{player.name}}</h3>
         <div class="player-info">
           <p>
             Goals: {{player.goals}}
           </p>
-          <p>
-            Wins: {{player.wins}}
-          </p>
-          <p>
-            Total Games: {{player.games}}
-          </p>
-        </div>
-        <div class="buttons">
-          <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
-          <button (click)="addWin(player.wins, player.$key)">+ Win</button>
-          <button (click)="addGame(player.games, player.$key)">+ Game</button>
         </div>
       </div>
       <div class="player-square" *ngFor="let player of players | async | ranker:'wins' | slice:0:1" layout="column">
+        <h2>wins</h2>
         <h3>{{player.name}}</h3>
         <div class="player-info">
           <p>
-            Goals: {{player.goals}}
-          </p>
-          <p>
             Wins: {{player.wins}}
           </p>
-          <p>
-            Total Games: {{player.games}}
-          </p>
-        </div>
-        <div class="buttons">
-          <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
-          <button (click)="addWin(player.wins, player.$key)">+ Win</button>
-          <button (click)="addGame(player.games, player.$key)">+ Game</button>
         </div>
       </div>
     </div>
     <div class="bottom-row">
       <div class="player-square" *ngFor="let player of players | async | ranker:'saves' | slice:0:1" layout="column">
+        <h2>saves</h2>
         <h3>{{player.name}}</h3>
         <div class="player-info">
           <p>
-            Goals: {{player.goals}}
+            Saves: {{player.saves}}
           </p>
-          <p>
-            Wins: {{player.wins}}
-          </p>
-          <p>
-            Total Games: {{player.games}}
-          </p>
-        </div>
-        <div class="buttons">
-          <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
-          <button (click)="addWin(player.wins, player.$key)">+ Win</button>
-          <button (click)="addGame(player.games, player.$key)">+ Game</button>
         </div>
       </div>
       <div class="player-square" *ngFor="let player of players | async | ranker:'games' | slice:0:1" layout="column">
+        <h2>games</h2>
         <h3>{{player.name}}</h3>
         <div class="player-info">
           <p>
-            Goals: {{player.goals}}
-          </p>
-          <p>
-            Wins: {{player.wins}}
-          </p>
-          <p>
             Total Games: {{player.games}}
           </p>
-        </div>
-        <div class="buttons">
-          <button (click)="addGoal(player.goals, player.$key)">+ Goal</button>
-          <button (click)="addWin(player.wins, player.$key)">+ Win</button>
-          <button (click)="addGame(player.games, player.$key)">+ Game</button>
         </div>
       </div>
     </div>
