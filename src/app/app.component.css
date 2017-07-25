@@ -92,3 +92,9 @@ h2, h3 {
   padding-left: 15px;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
