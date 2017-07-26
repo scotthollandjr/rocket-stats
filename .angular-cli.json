@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "rocket-logo.ico"
       ],
       "index": "index.html",
       "main": "main.ts",

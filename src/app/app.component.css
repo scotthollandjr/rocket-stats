@@ -24,8 +24,8 @@
 }
 
 .player-row img {
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
 }
 
 h2, h3 {
@@ -38,16 +38,25 @@ h2, h3 {
 }
 
 .player-row .player-content {
-  padding-left: 10px;
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.player-info, .buttons {
+.player-info {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.player-info p {
-  margin-right: 10px;
+.player-info .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .right-side {

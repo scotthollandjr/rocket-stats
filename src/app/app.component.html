@@ -3,26 +3,28 @@
     <div class="player-row" *ngFor="let player of players | async | ranker:'goals'" layout="row">
       <img src="../assets/img/{{player.name}}.png" />
       <div class="player-content" layout="column">
-        <h3>{{player.name}}</h3>
+        <span>{{player.name}}</span>
         <div class="player-info">
-          <p>
-            Goals: {{player.goals}}
-          </p>
-          <p>
-            Wins: {{player.wins}}
-          </p>
-          <p>
-            Saves: {{player.saves}}
-          </p>
-          <p>
-            Total Games: {{player.games}}
-          </p>
-        </div>
-        <div class="buttons">
-          <button (click)="add('goals', player)">+ Goal</button>
-          <button (click)="add('wins', player)">+ Win</button>
-          <button (click)="add('saves', player)">+ Save</button>
-          <button (click)="add('games', player)">+ Game</button>
+          <div class="stat">
+            <span>Goals:</span>
+            <h3>{{player.goals}}</h3>
+            <button (click)="add('goals', player)">+ Goal</button>
+          </div>
+          <div class="stat">
+            <span>Wins:</span>
+            <h3>{{player.wins}}</h3>
+            <button (click)="add('wins', player)">+ Win</button>
+          </div>
+          <div class="stat">
+            <span>Saves:</span>
+            <h3>{{player.saves}}</h3>
+            <button (click)="add('saves', player)">+ Save</button>
+          </div>
+          <div class="stat">
+            <span>Games:</span>
+            <h3>{{player.games}}</h3>
+            <button (click)="add('games', player)">+ Game</button>
+          </div>
         </div>
       </div>
     </div>
