@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="left-side">
+    <div class="player-row admin" *ngFor="let player of players | async" layout="row">
+      <img src="../assets/img/{{player.name}}.png" />
+      <div class="player-content" layout="column">
+        <span>{{player.name}}</span>
+        <div class="player-info">
+          <div class="stat">
+            <span>Goals:</span>
+            <h3>{{player.goals}}</h3>
+            <button (click)="add('goals', player)">+ Goal</button>
+          </div>
+          <div class="stat">
+            <span>Wins:</span>
+            <h3>{{player.wins}}</h3>
+            <button (click)="add('wins', player)">+ Win</button>
+          </div>
+          <div class="stat">
+            <span>Saves:</span>
+            <h3>{{player.saves}}</h3>
+            <button (click)="add('saves', player)">+ Save</button>
+          </div>
+          <div class="stat">
+            <span>Games:</span>
+            <h3>{{player.games}}</h3>
+            <button (click)="add('games', player)">+ Game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
