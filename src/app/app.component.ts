@@ -13,8 +13,8 @@ export class AppComponent {
   }
 
   add(type, player) {
-    let suckit = player[type] + 1;
-    this.players.update(player.$key, { [type]: suckit });
+    let newStat = player[type] + 1;
+    this.players.update(player.$key, { [type]: newStat });
   }
 }
 

@@ -10,6 +10,9 @@ import { ListComponent } from './app.component';
 import { AdminComponent } from './app.component';
 
 import { Ranker } from './pipes/ranker.pipe';
+import { Top } from './pipes/top.pipe';
+import { Goals } from './pipes/goals.pipe';
+import { Wins } from './pipes/wins.pipe';
 
 import { routes } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -19,7 +22,10 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     ListComponent,
     AdminComponent,
-    Ranker
+    Ranker,
+    Top,
+    Goals,
+    Wins
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'ranker'
+  name: 'goals'
 })
-export class Ranker implements PipeTransform {
+export class Goals implements PipeTransform {
   transform(array: Array<string>, args: string): Array<string> {
 
     if(!array || array === undefined || array.length === 0) return null;
     array.sort((a: any, b: any) => {
-      let statA = ((a.goals + a.saves) / a.games) * (a.wins / a.games);
-      let statB = ((b.goals + b.saves) / b.games) * (b.wins / b.games);
+      let statA = a.goals / a.games;
+      let statB = b.goals / b.games;
+      
       if (statA > statB) {
         return -1;
       } else if (statA < statB) {
