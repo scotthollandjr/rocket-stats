@@ -1,25 +1,30 @@
 <div class="container">
   <div class="left-side">
     <div class="player-row" *ngFor="let player of players | async | ranker:'goals'" layout="row">
-      <img src="../assets/img/{{player.name}}.png" />
+      <div class="name-image">
+        <img src="../assets/img/{{player.name}}.png" />
+      </div>
       <div class="player-content" layout="column">
-        <span>{{player.name}}</span>
         <div class="player-info">
-          <div class="stat">
-            <span>Goals:</span>
-            <h3>{{player.goals}}</h3>
+          <div class="stat-row">
+            <div class="stat">
+              <span>Goals:</span>
+              <h3>{{player.goals}}</h3>
+            </div>
+            <div class="stat">
+              <span>Wins:</span>
+              <h3>{{player.wins}}</h3>
+            </div>
           </div>
-          <div class="stat">
-            <span>Wins:</span>
-            <h3>{{player.wins}}</h3>
-          </div>
-          <div class="stat">
-            <span>Saves:</span>
-            <h3>{{player.saves}}</h3>
-          </div>
-          <div class="stat">
-            <span>Games:</span>
-            <h3>{{player.games}}</h3>
+          <div class="stat-row">
+            <div class="stat">
+              <span>Saves:</span>
+              <h3>{{player.saves}}</h3>
+            </div>
+            <div class="stat">
+              <span>Games:</span>
+              <h3>{{player.games}}</h3>
+            </div>
           </div>
         </div>
       </div>

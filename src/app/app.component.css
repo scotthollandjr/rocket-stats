@@ -42,7 +42,19 @@ h2, h3 {
   text-transform: uppercase;
 }
 
+.player-row .name-image {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.name-image .name {
+  font-size: 20pt;
+}
+
 .player-row .player-content {
+  margin: auto;
   margin-left: 10px;
   width: 100%;
   display: flex;
@@ -55,6 +67,20 @@ h2, h3 {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+}
+
+.stat button {
+  width: 50px;
+  height: 50px;
+  background: #f5fffb;
+  border-radius: 5px;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-around;
 }
 
 .player-info .stat {
@@ -110,5 +136,14 @@ h2, h3 {
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
+  }
+
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat {
+    padding: 5px;
   }
 }
