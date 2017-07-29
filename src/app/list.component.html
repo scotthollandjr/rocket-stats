@@ -31,7 +31,15 @@
     </div>
   </div>
   <div class="right-side">
-    <div class="player-square" *ngFor="let player of players | async | goals | slice:0:1" layout="row">
+    <div class="player-square" *ngFor="let player of players | async | top:'goals' | slice:0:1" layout="row">
+      <img src="../assets/img/{{player.name}}.png" />
+      <div class="player-content" layout="column">
+        <h2>GOALS</h2>
+        <h3>{{player.name}}</h3>
+        <p>{{player.goals}}</p>
+      </div>
+    </div>
+    <div class="player-square" *ngFor="let player of players | async | statsPerGame:'goals' | slice:0:1" layout="row">
       <img src="../assets/img/{{player.name}}.png" />
       <div class="player-content" layout="column">
         <h2>GOALS/GAME</h2>
@@ -39,26 +47,18 @@
         <p>{{player.goals / player.games | number:'.2-2'}}</p>
       </div>
     </div>
-    <div class="player-square" *ngFor="let player of players | async | top:'wins' | slice:0:1" layout="row">
+    <div class="player-square" *ngFor="let player of players | async | statsPerGame:'saves' | slice:0:1" layout="row">
       <img src="../assets/img/{{player.name}}.png" />
       <div class="player-content" layout="column">
-        <h2>WINS</h2>
+        <h2>SAVES/GAME</h2>
         <h3>{{player.name}}</h3>
-        <p>{{player.wins}}</p>
+        <p>{{player.saves / player.games | number:'.2-2'}}</p>
       </div>
     </div>
-    <div class="player-square" *ngFor="let player of players | async | top:'saves' | slice:0:1" layout="row">
+    <div class="player-square" *ngFor="let player of players | async | winPercentage | slice:0:1" layout="row">
       <img src="../assets/img/{{player.name}}.png" />
       <div class="player-content" layout="column">
-        <h2>SAVES</h2>
-        <h3>{{player.name}}</h3>
-        <p>{{player.saves}}</p>
-      </div>
-    </div>
-    <div class="player-square" *ngFor="let player of players | async | wins | slice:0:1" layout="row">
-      <img src="../assets/img/{{player.name}}.png" />
-      <div class="player-content" layout="column">
-        <h2>GAMES</h2>
+        <h2>WIN%</h2>
         <h3>{{player.name}}</h3>
         <p>{{player.wins / player.games | percent:'2.2-2' }}</p>
       </div>

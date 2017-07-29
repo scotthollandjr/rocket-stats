@@ -11,8 +11,8 @@ import { AdminComponent } from './app.component';
 
 import { Ranker } from './pipes/ranker.pipe';
 import { Top } from './pipes/top.pipe';
-import { Goals } from './pipes/goals.pipe';
-import { Wins } from './pipes/wins.pipe';
+import { StatsPerGame } from './pipes/stats-per-game.pipe';
+import { WinPercentage } from './pipes/win-percentage.pipe';
 
 import { routes } from './app.routes';
 import { RouterModule } from '@angular/router';
@@ -24,8 +24,8 @@ import { RouterModule } from '@angular/router';
     AdminComponent,
     Ranker,
     Top,
-    Goals,
-    Wins
+    StatsPerGame,
+    WinPercentage
   ],
   imports: [
     BrowserModule,
