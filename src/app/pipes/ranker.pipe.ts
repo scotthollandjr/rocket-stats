@@ -18,7 +18,6 @@ export class Ranker implements PipeTransform {
         return 0;
       }
     });
-
     return array;
   }
 }
